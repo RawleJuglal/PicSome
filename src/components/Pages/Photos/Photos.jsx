@@ -9,7 +9,7 @@ import {nanoid} from 'nanoid'
     // <Image key={???} img={<full image object here>} className={getClass(<index of image>)} />
 
 function Photos() {
-    const {photos} = useContext(Context)
+    const {photos, toggleFavorite} = useContext(Context)
 
     const imageElements = photos.map((img, i)=>{
         return <Image key={img.id} img={img} className={getClass(i)}/>
